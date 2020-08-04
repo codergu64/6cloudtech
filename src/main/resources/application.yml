@@ -1,0 +1,101 @@
+server:
+  port: 8888
+  servlet:
+    context-path: /6CloudTech
+
+spring:
+  mvc:
+    servlet:
+      load-on-startup: 1
+  application:
+    name: 6CloudTech
+  profiles:
+    active: local
+  aop:
+    auto: true
+    proxy-target-class: false
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: true
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    filters: stat,wall,log4j2
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+    useGlobalDataSourceStat: true
+mybatis:
+  type-aliases-package: com.cloudtech.domain.*
+  mapper-locations: classpath:/mapper/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    use-generated-keys: true
+    default-fetch-size: 100
+    default-statement-timeout: 60
+
+
+
+---
+spring:
+  profiles: local
+  datasource:
+    djej:
+      username: root
+      password: 123456
+      url: jdbc:mysql://localhost:3306/cloud_tech?serverTimezone=Asia/Shanghai&useSSL=false
+    test:
+      username: root
+      password: 123456
+      url: jdbc:mysql://localhost:3306/cloud_tech?serverTimezone=Asia/Shanghai&useSSL=false
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    pass:
+
+
+
+---
+spring:
+  profiles: staging
+  datasource:
+    djej:
+      username: root
+      password: 123456
+      url: jdbc:mysql://localhost:3306/cloud_tech?serverTimezone=Asia/Shanghai&useSSL=false
+    test:
+      username: root
+      password: 123456
+      url: jdbc:mysql://localhost:3306/cloud_tech?serverTimezone=Asia/Shanghai&useSSL=false
+  redis:
+    database: 3
+    host: 127.0.0.1
+    port: 6379
+    pass:
+
+
+---
+spring:
+  profiles: prod
+  datasource:
+    djej:
+      username: root
+      password: 123456
+      url: jdbc:mysql://localhost:3306/cloud_tech?serverTimezone=Asia/Shanghai&useSSL=false
+    test:
+      username: root
+      password: 123456
+      url: jdbc:mysql://localhost:3306/cloud_tech?serverTimezone=Asia/Shanghai&useSSL=false
+  redis:
+    database: 3
+    host: 127.0.0.1
+    port: 6379
+    pass:

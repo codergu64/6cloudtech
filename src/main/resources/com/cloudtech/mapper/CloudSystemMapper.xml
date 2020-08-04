@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cloudtech.mapper.CloudSystemMapper">
+  <resultMap id="BaseResultMap" type="com.cloudtech.domain.CloudSystem">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="product_id" jdbcType="INTEGER" property="productId" />
+    <result column="lab_id" jdbcType="INTEGER" property="labId" />
+    <result column="product_name" jdbcType="VARCHAR" property="productName" />
+    <result column="lab_name" jdbcType="VARCHAR" property="labName" />
+    <result column="dsecription" jdbcType="VARCHAR" property="dsecription" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, type, product_id, lab_id, product_name, lab_name, dsecription
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from cloud_system
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from cloud_system
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.cloudtech.domain.CloudSystem">
+    insert into cloud_system (id, type, product_id, 
+      lab_id, product_name, lab_name, 
+      dsecription)
+    values (#{id,jdbcType=INTEGER}, #{type,jdbcType=INTEGER}, #{productId,jdbcType=INTEGER}, 
+      #{labId,jdbcType=INTEGER}, #{productName,jdbcType=VARCHAR}, #{labName,jdbcType=VARCHAR}, 
+      #{dsecription,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.cloudtech.domain.CloudSystem">
+    insert into cloud_system
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="type != null">
+        type,
+      </if>
+      <if test="productId != null">
+        product_id,
+      </if>
+      <if test="labId != null">
+        lab_id,
+      </if>
+      <if test="productName != null">
+        product_name,
+      </if>
+      <if test="labName != null">
+        lab_name,
+      </if>
+      <if test="dsecription != null">
+        dsecription,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=INTEGER},
+      </if>
+      <if test="productId != null">
+        #{productId,jdbcType=INTEGER},
+      </if>
+      <if test="labId != null">
+        #{labId,jdbcType=INTEGER},
+      </if>
+      <if test="productName != null">
+        #{productName,jdbcType=VARCHAR},
+      </if>
+      <if test="labName != null">
+        #{labName,jdbcType=VARCHAR},
+      </if>
+      <if test="dsecription != null">
+        #{dsecription,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.cloudtech.domain.CloudSystem">
+    update cloud_system
+    <set>
+      <if test="type != null">
+        type = #{type,jdbcType=INTEGER},
+      </if>
+      <if test="productId != null">
+        product_id = #{productId,jdbcType=INTEGER},
+      </if>
+      <if test="labId != null">
+        lab_id = #{labId,jdbcType=INTEGER},
+      </if>
+      <if test="productName != null">
+        product_name = #{productName,jdbcType=VARCHAR},
+      </if>
+      <if test="labName != null">
+        lab_name = #{labName,jdbcType=VARCHAR},
+      </if>
+      <if test="dsecription != null">
+        dsecription = #{dsecription,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.cloudtech.domain.CloudSystem">
+    update cloud_system
+    set type = #{type,jdbcType=INTEGER},
+      product_id = #{productId,jdbcType=INTEGER},
+      lab_id = #{labId,jdbcType=INTEGER},
+      product_name = #{productName,jdbcType=VARCHAR},
+      lab_name = #{labName,jdbcType=VARCHAR},
+      dsecription = #{dsecription,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
