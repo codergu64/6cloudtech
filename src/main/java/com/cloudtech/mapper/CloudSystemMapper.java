@@ -2,6 +2,8 @@ package com.cloudtech.mapper;
 
 import com.cloudtech.domain.CloudSystem;
 
+import java.util.List;
+
 public interface CloudSystemMapper {
     int deleteByPrimaryKey(Integer id);
 
@@ -14,4 +16,11 @@ public interface CloudSystemMapper {
     int updateByPrimaryKeySelective(CloudSystem record);
 
     int updateByPrimaryKey(CloudSystem record);
+
+    /**
+     * 查出产品体系 超弦实验室
+     * @return
+     */
+    List<CloudSystem> selectProductAll(int type);
+
 }

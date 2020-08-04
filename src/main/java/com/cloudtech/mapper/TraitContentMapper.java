@@ -2,6 +2,8 @@ package com.cloudtech.mapper;
 
 import com.cloudtech.domain.TraitContent;
 
+import java.util.List;
+
 public interface TraitContentMapper {
     int deleteByPrimaryKey(Integer id);
 
@@ -16,4 +18,13 @@ public interface TraitContentMapper {
     int updateByPrimaryKeyWithBLOBs(TraitContent record);
 
     int updateByPrimaryKey(TraitContent record);
+
+    /**
+     * 根据lab_id查询
+     */
+    List<TraitContent> selectByLabId(Integer labId);
+    /**
+     * 根据product_id查询
+     */
+    List<TraitContent> selectByProductId(Integer productId);
 }
