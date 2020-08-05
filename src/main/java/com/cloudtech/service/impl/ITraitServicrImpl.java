@@ -6,6 +6,7 @@ import com.cloudtech.service.ITraitService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -14,8 +15,10 @@ import java.util.List;
  */
 @Service
 public class ITraitServicrImpl implements ITraitService {
-    @Autowired
+
+    @Resource
     private TraitContentMapper traitContentMapper;
+
     @Override
     public List<TraitContent> selectByLabId(Integer labId) {
         List<TraitContent> labTraitContent = traitContentMapper.selectByLabId(labId);

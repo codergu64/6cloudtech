@@ -122,6 +122,6 @@
       select * from trait_content where lab_id=#{labId,jdbcType=INTEGER}
     </select>
   <select id="selectByProductId" resultMap="BaseResultMap">
-      select * from trait_content where product_id = #{productId,jdbcType=INTEGER}
+      select * from trait_content where product_id=#{productId,jdbcType=INTEGER}
   </select>
 </mapper>
