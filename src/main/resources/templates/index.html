@@ -4,21 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        小米商城 - 小米10 Pro、Redmi 10X、小米MIX Alpha，小米电视官方网站
+        六方云-让万物安全互联
     </title>
     <!--引入重置样式表-->
-    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="css/reset.css">
     <!--引入图标字体-->
     <!--引入当前页面的样式表-->
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="css/index.css">
     <!--引入公共的样式表-->
-    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/layui.css">
+    <link rel="stylesheet" href="css/prism.css">
+    <link rel="stylesheet" href="css/swiper.css">
     <!--设置网站图标-->
-    <link rel="icon" href="./img/favicon.ico">
-    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="./bootstrap/css/bootstrap-theme.min.css">
-    <script src="./bootstrap/js/jquery-3.4.1.min.js"></script>
-    <script src="./bootstrap/js/bootstrap.min.js" type="application/javascript"></script>
+    <link rel="icon" href="img/web-logo.ico">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
+    <script src="bootstrap/js/jquery-3.4.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js" type="application/javascript"></script>
 </head>
 <body>
     <!--顶部导航条-->
@@ -28,202 +32,365 @@
         <div class="topbar w clearfix">
             <!--左侧导航条-->
             <ul class="service">
-                <li><a href="javascript:;">小米商城</a></li>
+                <li><a href="javascript:;">六方云</a></li>
                 <li class="line">|</li>
-                <li><a href="javascript:;">MIUI</a></li>
+                <li><a href="javascript:;">让万物安全互联</a></li>
                 <li class="line">|</li>
-                <li><a href="javascript:;">loT</a></li>
+                <li><a href="javascript:;">AiSec</a></li>
                 <li class="line">|</li>
-                <li><a href="javascript:;">云服务</a></li>
+                <li><a href="javascript:;">Csec</a></li>
                 <li class="line">|</li>
-                <li><a href="javascript:;">金融</a></li>
+                <li><a href="javascript:;">CdSec</a></li>
                 <li class="line">|</li>
-                <li><a href="javascript:;">有品</a></li>
+                <li><a href="javascript:;">LinSec</a></li>
                 <li class="line">|</li>
-                <li><a href="javascript:;">小爱开放平台</a></li>
+                <li><a href="javascript:;">NSec</a></li>
                 <li class="line">|</li>
-                <li><a href="javascript:;">企业团购</a></li>
+                <li><a href="javascript:;">安全服务</a></li>
                 <li class="line">|</li>
-                <li><a href="javascript:;">资质证照</a></li>
+                <li><a href="javascript:;">超弦人工智能实验室</a></li>
                 <li class="line">|</li>
-                <li><a href="javascript:;">协议规则</a></li>
+                <li><a href="javascript:;">超弦攻防研究实验室</a></li>
                 <li class="line">|</li>
-                <!-- <li class="app-wrapper">
-                    <a class="app" href="javascript:;">
-                        下载app -->
-                        <!--增加一个弹出层-->
-                        <!-- <div class="qrcode">
-                            <img src="./img/mi.png"/>
-                            <span>小米商城App</span>
-                        </div>
-                    </a>
-                </li>  -->
+                <li><a href="javascript:;">超弦工控安全实验室</a></li>
                 <li class="line">|</li>
-                <li><a href="javascript:;">Select Location</a></li>
-                <li class="line">|</li>
-            </ul>          
+            </ul>
         </div>
     </div>
+
     <!--创建一个头部的外部容器-->
     <div class="header-wrapper">
         <div class="header w clearfix">
             <!--创建一个logo-->
-            <h1 class="logo" title="小米">
-                小米官网
-                <a class="home" href="/"></a>
-                <a class="mi" href="/"></a>
-            </h1>
+            <img src="img/logo.png" class="logo-img">
             <!--创建一个中间导航条的容器-->
-            <div class="nav-wrapper">
+            <div class="nav-wrapper1">
                 <!--创建导航条-->
-                <ul class="nav clearfix">
-                    <li class="all-goods-wrapper">
-                        <a class="all-goods" href="#">全部商品分类</a>
-                        <!--创建左侧的导航菜单-->
-                        <!-- <ul class="left-menu">  
-                             <li>
-                                <a href="#">手机 电话卡  <i>></i></a>
-                             </li>
-                             <li>
-                                <a href="#">电视 盒子  <i>></i></a>
-                             </li>
-                             <li>
-                                <a href="#">笔记本 平板  <i>></i></a>
-                             </li>
-                             <li>
-                                <a href="#">家电 插线板  <i>></i></a>
-                             </li>
-                             <li>
-                                <a href="#">出行 穿戴  <i>></i></a>
-                             </li>
-                             <li>
-                                <a href="#">智能 路由器  <i>></i></a>
-                             </li>
-                             <li>
-                                <a href="#">电源 配件 <i>></i></a>
-                             </li>
-                             <li>
-                                <a href="#">健康 儿童  <i>></i></a>
-                             </li>
-                             <li>
-                                <a href="#">耳机 音箱  <i>></i></a>
-                             </li>
-                             <li>
-                                <a href="#">生活 箱包  <i>></i></a>
-                             </li>
-                        </ul> -->
-                    </li>
-                    <li ><a href="#">首页</a></li>
+                <ul class="nav1 clearfix">
+                    <!-- <li class="all-goods-wrapper">
+                        <a class="all-goods" href="#">全部类型分类</a>     
+                     </li> -->
+                    <li><a href="#">首页</a></li>
                     <li class="show-goods"><a href="#">5+1产品线</a></li>
-                    <li class="show-goods"><a href="#">超弦实验室</a></li>
-                    <li><a href="#">服务</a></li>
-                    <li><a href="#">社区</a></li>
+                    <li class="show-goods1"><a href="#">超弦实验室</a></li>
 
+                    <div class="detail-info1">
+                        <div class="info1">
+                            <span><a target="_black" href="./product.html">超弦人工智能实验室</a></span>
+                        </div>
+                        <div class="info1">
+                            <span><a target="_black" href="./product.html">超弦工控安全实验室</a></span>
+                        </div>
+                        <div class="info1">
+                            <span><a target="_black" href="./product.html">超弦攻防研究实验室</a></span>
+                        </div>
+                    </div>
                     <!--创建一个弹出层-->
-                    <div class="goods-info">
-
+                    <div class="detail-info">
+                        <div class="info">
+                            <span><a target="_black" href="./product.html">AI安全</a></span>
+                        </div>
+                        <div class="info">
+                            <span><a target="_black" href="./product.html">工控安全</a></span>
+                        </div>
+                        <div class="info">
+                            <span><a target="_black" href="./product.html">网络安全</a></span>
+                        </div>
+                        <div class="info">
+                            <span><a target="_black" href="./product.html">云安全</a></span>
+                        </div>
+                        <div class="info">
+                            <span><a target="_black" href="./product.html">态势感知</a></span>
+                        </div>
+                        <div class="info">
+                            <span><a target="_blank" href="./product.html">安全服务</a></span>
+                        </div>
                     </div>
                 </ul>
             </div>
 
         </div>
     </div>
-    <!--创建一个banner的容器-->
-    <div class="banner-wrapper">
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-            </ol>
-          
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-              <div class="item active">
-                <img src="./img/index1.png" alt="...">
-                <div class="carousel-caption">
-                  ...
-                </div>
-              </div>
-              <div class="item">
-                <img src="./img/index2.png" alt="...">
-                <div class="carousel-caption">
-                  ...
-                </div>
-              </div>
-              <div class="item">
-                <img src="./img/index3.png" alt="...">
-                <div class="carousel-caption">
-                  ...
-                </div>
-              </div>
-              <div class="item">
-                <img src="./img/index4.png" alt="...">
-                <div class="carousel-caption">
-                  ...
-                </div>
-              </div>
-            </div>
-          
-            <!-- Controls -->
-            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-              <span class="sr-only">上一张</span>
-            </a>
-            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-              <span class="sr-only">下一张</span>
-            </a>
-          </div>
-    </div>
-    <!--创建工具条-->
-    <div class="back-top">
 
+    <!--创建一个banner的容器-->
+     <div class="banner-wrapper" >
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                  <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                  <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                </ol>
+              
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                  <div class="item active">
+                    <img src="img/index1.png" alt="11111">
+                    <div class="carousel-caption">
+
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="img/index2.png" alt="...">
+                    <div class="carousel-caption">
+
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="img/index3.png" alt="...">
+                    <div class="carousel-caption">
+
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="img/index4.png" alt="...">
+                    <div class="carousel-caption">
+
+                    </div>
+                  </div>
+
+                </div>
+              
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                  <span class="sr-only">上一张</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                  <span class="sr-only">下一张</span>
+                </a>
+            </div>
+    </div> 
+
+    <!--5+1产品介绍-->
+    <div class="product">
+        <div>
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active procuct-tab"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">AI安全</a></li>
+              <li role="presentation"><a href="#profile" class="procuct-tab" aria-controls="profile" role="tab" data-toggle="tab">工控安全</a></li>
+              <li role="presentation"><a href="#messages" class="procuct-tab" aria-controls="messages" role="tab" data-toggle="tab">网络安全</a></li>
+              <li role="presentation"><a href="#settings" class="procuct-tab" aria-controls="settings" role="tab" data-toggle="tab">云安全</a></li>
+              <li role="presentation"><a href="#CdSec" class="procuct-tab" aria-controls="CdSec" role="tab" data-toggle="tab">态势感知</a></li>
+              <li role="presentation"><a href="#Safe" class="procuct-tab" aria-controls="Safe" role="tab" data-toggle="tab">安全服务</a></li>
+            </ul>
+          
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="home">
+                <ul class="my_dropdown ">
+                    <li class="product1">
+                    <a href="product/selectByProductId/1" >
+                        全流量威胁检测与回溯系统-神探</a> 
+                    </li>
+                </ul>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="profile">
+                <ul class="my_dropdown ">
+                    <li class="product1">
+                        <a href="/portal/index/product/pagename/page_industrial_control.html" 
+                        >监管平台</a> <!--style="text-decoration: none; font-size: 20px; margin: 5px 15px 15px 45px;float: left;position: absolute;top: 800px;left: 350px;"-->
+                    </li>
+                    <li class="product2">
+                        <a href="/portal/index/product/pagename/page_industrial_firewall.html" 
+                        >工业防火墙</a>  <!--style="text-decoration: none; font-size: 20px; margin: 5px 15px 15px 45px;float: left;position: absolute;top: 800px;left: 620px;"-->
+                    </li>
+                    <li class="product3">
+                        <a href="/portal/index/product/pagename/page_industrial_audit.html" 
+                        >工业审计系统</a><!--style="text-decoration: none; font-size: 20px; margin: 5px 15px 15px 45px;float: left;position: absolute;top: 800px;left: 890px;"-->
+                    </li>
+                    <li class="product4">
+                        <a href="/portal/index/product/pagename/page_industrial_guards.html" 
+                        >工业卫士软件</a><!--style="text-decoration: none; font-size: 20px; margin: 5px 15px 15px 45px;float: left;position: absolute;top: 900px;left: 350px;"-->
+                    </li>
+                    <li class="product5">
+                        <a href="/portal/index/product/pagename/page_industrial_gate.html" 
+                        >工业网闸系统</a>
+                    </li>
+                    <li class="product6">
+                        <a href="/portal/index/product/pagename/page_industrial_sweep.html" 
+                        >工业漏扫系统</a>
+                    </li>
+                    <li class="product7">
+                        <a href="/portal/index/product/pagename/page_industrial_check.html" 
+                        >工业网络风险评估系统</a>
+                    </li>
+                    <li class="product8">
+                        <a href="/portal/index/product/pagename/page_industrial_honeypot.html" 
+                        >工控威胁感知系统-工业蜜罐</a>        
+                    </li>
+                </ul>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="messages">
+                <ul class="my_dropdown ">
+                    <li class="product1">
+                        <a href="/portal/index/product/pagename/page_network_sec_nextwall.html" >下一代防火墙-NGFW</a>
+                    </li>
+                    <li class="product2">
+                        <a href="/portal/index/product/pagename/page_network_sec_defense.html" >入侵防御系统-IPS</a>     
+                    </li>
+                    <li class="product3">
+                        <a href="/portal/index/product/pagename/page_network_sec_invasion.html" >入侵检测系统-IDS</a>    
+                    </li>
+                    <li class="product4">
+                        <a href="/portal/index/product/pagename/page_network_aircraft.html" >运维管理与审计系统-堡垒机</a>    
+                    </li>
+                    <li class="product5">
+                        <a href="/portal/index/product/pagename/page_network_audit.html" >日志审计与分析系统-日志审计</a>  
+                    </li>
+                </ul>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="settings">
+                <ul class="my_dropdown ">
+                    <li class="product1">
+                        <a href="/portal/index/product/pagename/page_sixcloud_winton.html" >分布式虚拟防火墙系统-云盾</a>   
+                    </li>
+                    <li class="product2">
+                        <a href="/portal/index/product/pagename/page_sixcloud_mirror.html" >分布式虚拟入侵检测系统-云镜</a>   
+                    </li>
+                    <li class="product3">
+                        <a href="/portal/index/product/pagename/page_sixcloud_pool.html" >云安全资源调度与管理系统-云池</a>
+                    </li>
+                </ul>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="CdSec">
+                <ul class="my_dropdown ">
+                    <li class="product1">
+                        <a href="/portal/index/product/pagename/page_situational_panorama.html">全景安全态势感知平台</a>  
+                    </li>
+                    <li class="product2">
+                        <a href="/portal/index/product/pagename/page_situational_enterprise.html">企业安全态势感知平台</a>   
+                    </li>
+                    <li class="product3">
+                        <a href="/portal/index/product/pagename/page_situational_factory.html">厂站安全态势感知平台</a>
+                    </li>
+                    <li class="product4">
+                        <a href="/portal/index/product/pagename/page_network_security.html">网络安全工作平台-NSWP</a>
+                    </li>
+                </ul>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="Safe">
+                <ul class="my_dropdown ">
+                    <li class="product1">
+                        <a href="/portal/index/product/pagename/page_security_services.html">工业互联网安全服务</a> 
+                    </li>
+                </ul>
+            </div>
+        </div>
+          
     </div>
-    <!--广告宣传-->
-    <div class="ad w">
-        <ul class="shortcut">
-            <li>
-                <a href="#">
-                    <i>★</i>
-                    小米秒杀</a>
-            </li>
-            <li>
-                <a href="#">
-                    <i>▲</i>
-                    企业团购</a>
-            </li>
-            <li>
-                <a href="#">
-                    <i>■</i>
-                    F码通道</a>
-            </li>
-            <li>
-                <a href="#">
-                    <i>●</i>
-                    米粉卡</a>
-            </li>
-            <li>
-                <a href="#">
-                    <i>◆</i>
-                    以旧换新</a>
-            </li>
-            <li>
-                <a href="#"><i>〓</i>话费充值</a>
-            </li>
-        </ul>
-        <!-- <ul class="imgs">
-            <li>
-                <a href="#"><img src="./img/1.jpg" alt=""></a>
-            </li>
-            <li>
-                <a href="#"><img src="./img/2.jpg" alt=""></a>
-            </li>
-            <li>
-                <a href="#"><img src="./img/3.jpg" alt=""></a>
-            </li>
-        </ul> -->
+</div>
+<main >
+        <!--行业情报信息-->
+        <aside>
+            <!-- 类目标签 -->
+            <div class="sitebar">
+                <h4 class="title">5 + 1 产品线</h4>
+                <div class="tag-list">
+                    <a href="./product.html" target="_blank">CSec</a>
+                    <a href="/posts/tags/5.html" target="_blank">NSec</a>
+                    <a href="/posts/tags/8.html" target="_blank">AISec</a>
+                    <a href="/posts/tags/5.html" target="_blank">CdSec</a>
+                    <a href="/posts/tags/5.html" target="_blank">态势感知</a>
+                    <a href="/posts/tags/5.html" target="_blank">安全服务</a>
+                </div>
+            </div>
+            <!-- 最新帖子列表 -->
+            <div class="sitebar">
+                <h4 class="title">安全态势周刊</h4>
+                <ul class="posts-list">
+                    <li><a href="/posts/detail/20.html">安全态势周刊-六方云（AI基因·威胁免疫）——第114期</a></li>
+                    <li><a href="/posts/detail/19.html">安全态势周刊-六方云（AI基因·威胁免疫）——第113期</a></li>
+                    <li><a href="/posts/detail/18.html">安全态势周刊-六方云（AI基因·威胁免疫）——第112期</a></li>
+                    <li><a href="/posts/detail/17.html">安全态势周刊-六方云（AI基因·威胁免疫）——第111期</a></li>
+                </ul>
+            </div>
+            <!-- 广告图片 -->
+            <!-- <div class="sitebar">
+                <a href="#" target="_blank">
+                    <img src="./img/safe.png" alt="安全情报">
+                </a>
+            </div> -->
+        </aside>
+
+        <article>
+            <!-- 轮播 -->
+            <div class="swiper">
+                <div class="swiper-container autoImg swiper-container-horizontal">
+                    <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-1580px, 0px, 0px);">
+                        <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="1" style="width: 790px;"> <a href="#"><img src="img/safe.png" alt="鱼书网"></a></div>
+                        <div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="0" style="width: 790px;"> <a href="#"><img src="img/safe.png" alt="鱼书网"></a></div>
+                        <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="1" style="width: 790px;"> <a href="#"><img src="img/safe.png" alt="鱼书网"></a></div>
+                        <div class="swiper-slide swiper-slide-duplicate swiper-slide-next" data-swiper-slide-index="0" style="width: 790px;"><a href="#"><img src="img/safe.png" alt="鱼书网"></a></div>
+                    </div>
+                    
+                </div>
+            </div>
+        </article>
+    </main>  
+    <div class="clearfix"></div>
+
+    <!--条形背景-->
+    <div class="bac-img">
+        <p class="p1">让万物安全互联</p>
+        <p class="p2">实现工业安全互联 · 帮助用户安全上云 · 助力用户全面掌控安全态势</p>
+        <button class="red-btn outline-bbtn">项目咨询</button>
+        <button class="red-btn outline-bbtn">申请白皮书</button>
     </div>
+    <div></div>
+
+
+    <div><div class="footer">
+        <table style="text-align: center;vertical-align:middle;">
+            <tr>
+                <td>5+1产品线</td>
+                <td>行业方案</td>
+                <td>超弦实验室</td>
+                <td>关于我们</td>
+            </tr>
+            <tr>
+                <td>AI安全</td>
+                <td>工业互联网安全解决方案</td>
+                <td>超弦人工智能实验室</td>
+                <td>公司简介</td>
+            </tr>
+            <tr>
+                <td>工控安全</td>
+                <td>人工智能安全解决方案</td>
+                <td>超弦攻防研究实验室</td>
+                <td>新闻与活动</td>
+            </tr>
+            <tr>
+                <td>网络安全</td>
+                <td>云安全解决方案</td>
+                <td>超弦工控安全实验室</td>
+                <td>行业应用</td>
+            </tr>
+            <tr>
+                <td>云安全</td>
+                <td>态势感知安全解决方案</td>
+                <td>安全周刊</td>
+                <td>人才招聘</td>
+            </tr>
+            <tr>
+                <td>态势感知</td>
+                <td></td>
+                <td>安全研究</td>
+                <td>联系我们</td>
+            </tr>
+            <tr>
+                <td>安全服务</td>
+                <td></td>
+                <td>特征库更新</td>
+                <td></td>
+            </tr>
+        </table>
+        <div>Copyright © 2019  ICP备000000号 · 服务器使用: <a href="https://www.6cloudtech.com/">华为云</a> · All Rights Reserved Powered By <a href="/">六方云-让万物安全互联</a></div>
+        <div>AI安全 | 工控安全  |  网络安全  |   云安全  |   态势感知  |   安全服务  |  超弦人工智能实验室 |  超弦工控安全实验室  |  超弦攻防研究实验室</div>
+    </div></div>
+    <button onclick="test();">test</button> 
 </body>
 </html>

@@ -32,74 +32,7 @@
 .service, .topbar li{
     float: left; 
 }
-.app{
-    position: relative;
-}
-/*添加一个小的三角*/
-.app-wrapper:hover>.app::after{
-    content:'';
-    position: absolute;
-    width: 0;
-    height:0;
-    border:7px solid transparent;
-    /*去除上边框*/
-    border-top: none;
-    border-bottom-color: #fff;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-}
-/*显示二维码*/
-.app-wrapper:hover>.app .qrcode{
-    display: block;
-    height: 148px;
-}
 
-/*设置下载app的下拉图片*/
-.app .qrcode{
-    display: none;
-    position: absolute;
-    left:22px;
-    width:124px;
-    height:0;
-    overflow: hidden;
-    margin-left: -62px;
-    background-color: #fff;
-    line-height: 1;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
-    z-index: 9999;
-    /*transition: height 3s;*/
-}
-/*设置二维码的图片*/
-.app .qrcode img{
-    width:90px;
-    margin:17px;
-    margin-bottom:10px;
-}
-/*设置二维码的文字*/
-.app .qrcode span{
-    font-size: 14px;
-    color:#000;
-}
-/*设置右侧导航栏右侧浮动*/
-.shop-cart,.user-info{
-    float: right;
-}
-.shop-cart{
-    margin-left: 26px;
-}
-.shop-cart:hover a{
-    background-color: #fff;
-    color:#FF6700;
-}
-/*设置购物车的样式:宽度、背景颜色、居中*/
-.shop-cart a{
-    width: 120px;
-    background-color: #424242;
-    text-align: center;
-}
 
 .header-wrapper{
     position: relative;
@@ -109,41 +42,40 @@
     height: 100px;
 }
 /*设置logo的h1样式*/
-.header .logo {
+.header .logo-img {
     float: left;
-    margin-top: 12px;
-    width: 50px;
-    height: 20px;
-    position: relative;
-    overflow: hidden;
-    /*隐藏logo中的字体，那个字体是给搜索引擎看的，不应该展示出来，即小米官网那4个字*/
+    margin-top: 22px;
+    /* overflow: hidden; */
     text-indent: -9999px;
 }
 /*设置logo的超链接*/
 .header .logo a{
-    position: absolute;
-    width: 50px;
-    height: 20px;
     left: 0;
     background-color: red;
-    background-image: url(../img/logo.png);
+    background-image: url(../img/web-logo.ico);
     background-position: center;
     transition: left 0.3s;
 }
+.logo-img{
+    width: 140px;
+    height: 40px;
+
+}
+
 
 /*设置中间的导航条*/
-.header .nav-wrapper{
+.header .nav-wrapper1{
     float:left;
     margin-left: 7px;
 }
-.header .nav{
+.header .nav1{
     height: 100px;
     /*设置行高，这个可以让元素垂直居中*/
     line-height: 100px;
     padding-left: 58px;
 }
 /*设置导航条中的li*/
-.nav > li{
+.nav1 > li{
     float:left;
 }
 .all-goods-wrapper{
@@ -178,15 +110,15 @@ ul.left-menu li a:hover{
     line-height: 42px;
 }
 /*设置导航条中的字体*/
-.nav-wrapper li a{
+.nav-wrapper1 li a{
     /*设置为块元素后点击字体的上下侧*/
     display: block;
     font-size: 16px;
     margin-right: 20px;
 }
 /*鼠标指到时变色*/
-.nav-wrapper li a:hover{
-    color:#ff6700;
+.nav-wrapper1 li a:hover{
+    color:red;
 }
 /*隐藏全部商品字体*/
 .all-goods{
@@ -194,11 +126,10 @@ ul.left-menu li a:hover{
     visibility: hidden;
 }
 
-.nav .goods-info{
+.nav1 .detail-info{
     height: 0;
     overflow: hidden;
     background-color: #fff;
-    
     position: absolute;
     width: 100%;
     top: 100px;
@@ -208,12 +139,45 @@ ul.left-menu li a:hover{
     z-index: 9999;
    
 }
-.nav .show-goods:hover ~ .goods-info,
-.goods-info:hover{
+.nav1 .detail-info .info{
+    float:left;
+}
+.nav1 .show-goods:hover ~ .detail-info,
+.detail-info:hover{
     height: 228px;
     border-top: 1px solid rgb(224, 224, 224);
      /*设置阴影*/
      box-shadow: 0 5px 3px rgba(0, 0, 0, .2);
+}
+/* ====== */
+
+.nav1 .detail-info1{
+    height: 0;
+    overflow: hidden;
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    top: 100px;
+    left:0;
+    transition:height 0.3s ;
+    /*设置一个比较高的层级，让其展示在最上方*/
+    z-index: 9999;
+   
+}
+.nav1 .detail-info1 .info1{
+    float:left;
+}
+.nav1 .show-goods1:hover ~ .detail-info1,
+.detail-info1:hover{
+    height: 228px;
+    border-top: 1px solid rgb(224, 224, 224);
+     /*设置阴影*/
+     box-shadow: 0 5px 3px rgba(0, 0, 0, .2);
+}
+/* ====== */
+.nav1 li a{
+    font-size: 19px;
+    color:black;
 }
 
 
@@ -229,11 +193,6 @@ ul.left-menu li a:hover{
     width: 100%;
     vertical-align: top;
 }
-.banner-wrapper{
-    margin-top:50px;
-}
-
- 
 
 /*设置回到顶部*/
 .back-top{
@@ -306,4 +265,178 @@ ul.left-menu li a:hover{
 .ad .imgs img{
     width: 100%;
     vertical-align: top;
+}
+.product{
+    margin: 50px 350px;
+}
+.product .product-tab{
+    font-size: 20px;
+}
+
+/* 行业情报 */
+.industry{
+    margin: 50px 300px;
+}
+.industry .industry-img{
+    display:inline;
+}
+.footer {
+    padding: 10px 25%;
+    color: #666;
+    background-color:black;
+}
+.footer table td{ 
+    width: 200px;
+    height: 35px;
+}
+
+/*条形背景样式*/
+.bac-img{
+    background-image: url(../img/background2.jpg);
+    height: 150px;
+    text-align: center;
+    margin:0 auto;
+}
+.p1{
+    font-size: 30px;
+    line-height: 64px;
+    font-weight: 200;
+    letter-spacing: 4px;
+    margin: 0;
+    padding: 0;
+    color:#fff;
+}
+.p2{
+    color:#fff;
+    font-size: 16px;
+    line-height: 20px;
+}
+.red-btn{
+    padding: 2px 37px;
+    color: #333;
+    background: #fff;
+    border-color: #fff
+}
+.outline-bbtn{
+    display: inline-block;
+    padding: 3px 23px;
+    margin: 3px;
+    border: 2px solid #FFFFFF;
+    /* border-radius: 10px; */
+    -webkit-transition: 0.2s opacity;
+    transition: 0.2s opacity
+}
+
+
+/*隐藏层的页面的显示*/
+.detail-info{
+    margin:0 auto;
+    text-align:center;
+}
+.detail-info a{
+    font-size: 25px;
+    margin: 35px;
+    color:black;
+}
+
+.detail-info1{
+    margin:0 auto;
+    text-align:center;
+}
+.detail-info1 a{
+    font-size: 25px;
+    margin: 35px;
+    color:black;
+}
+
+.tab-content{
+    width: 850px;
+    height: 400px;
+    border: 5px solid red;
+}
+.tabpanel{
+    width: 200px;
+    height: 50px;
+    margin: 20px;
+
+}
+.product1{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px; 
+    margin: 5px 15px 15px 45px;
+    float: left;
+    position: absolute;
+    top: 800px;
+    left: 350px;
+}
+.product2{
+    text-decoration: none; 
+    font-weight: bold;
+    font-size: 20px; 
+    margin: 5px 15px 15px 45px;
+    float: left;
+    position: absolute;
+    top: 800px;
+    left: 620px;
+}
+.product3{
+    text-decoration: none; 
+    font-weight: bold;
+    font-size: 20px; 
+    margin: 5px 15px 15px 45px;
+    float: left;
+    position: absolute;
+    top: 800px;
+    left: 890px;
+}
+.product4{
+    text-decoration: none; 
+    font-weight: bold;
+    font-size: 20px; 
+    margin: 5px 15px 15px 45px;
+    float: left;
+    position: absolute;
+    top: 900px;
+    left: 350px;
+}
+.product5{
+    text-decoration: none; 
+    font-weight: bold;
+    font-size: 20px; 
+    margin: 5px 15px 15px 45px;
+    float: left;
+    position: absolute;
+    top: 900px;
+    left: 620px;
+}
+.product6{
+    text-decoration: none; 
+    font-weight: bold;
+    font-size: 20px; 
+    margin: 5px 15px 15px 45px;
+    float: left;
+    position: absolute;
+    top: 900px;
+    left: 890px;
+}
+.product7{
+    text-decoration: none; 
+    font-weight: bold;
+    font-size: 20px; 
+    margin: 5px 15px 15px 45px;
+    float: left;
+    position: absolute;
+    top: 1000px;
+    left: 350px;
+}
+.product8{
+    text-decoration: none; 
+    font-weight: bold;
+    font-size: 20px; 
+    margin: 5px 15px 5px 45px;
+    float: left;
+    position: absolute;
+    top: 1000px;
+    left: 620px;
 }

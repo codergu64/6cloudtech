@@ -1,0 +1,144 @@
+/*顶部导航条的容器*/
+.topbar-wrapper{
+    /*设置宽度全屏、设置高度和行高、设置背景颜色*/
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #333;
+    margin:0;
+    padding: 0;
+}
+.topbar a{
+    font-size: 12px;
+    color:#b0b0b0;
+   
+    /*设置为块元素，实现不仅仅可以点击字体，点击空白处也可以跳转*/
+    display: block;
+}
+/*设置超链接移入的效果*/
+.topbar a:hover{
+    color:#fff;
+}
+/*设置分割线的样式*/
+.topbar .line{
+    font-size: 12px;
+    color:#424242;
+    /*设置线与左右侧有间距*/
+    margin: 0 8px;
+    margin-top:-1px;
+}
+/*设置左侧导航栏向左浮动*/
+.service, .topbar li{
+    float: left; 
+}
+
+/*设置详情页产品标题*/
+.product-wrapper{
+    background-image: url(../img/product1.png);
+    height: 400px;
+}
+
+.product-title{
+    padding-top:100px;
+    padding-left:100px;
+}
+.product-title .info1{
+    font-size: 40px;
+}
+.product-title .info2{
+    font-size: 18px;
+}
+.row{
+    padding-top: 70px;
+    margin-top: 0 auto;
+    text-align: center;
+}
+.title{
+    padding-top: 40px;
+    /* margin:0 auto; */
+    text-align:center;
+}
+.title .title-name{
+    font-size: 27px;
+}
+.title .title-intro{
+    padding-right: 100px;
+    padding-left: 100px;
+    font-size: 17px;
+}
+.product-intro div{
+    display: inline;
+    word-wrap:break-word; /*允许长单词换行到下一行*/ 
+word-break:break-all; /*这个参数根据需要来决定要不要*/ 
+overflow: hidden;/*这个参数根据需要来决定要不要*/ 
+}
+
+/*条形背景样式*/
+.bac-img{
+    background-image: url(../img/background2.jpg);
+    height: 150px;
+    text-align: center;
+    margin:0 auto;
+}
+.p1{
+    font-size: 30px;
+    line-height: 64px;
+    font-weight: 200;
+    letter-spacing: 4px;
+    margin: 0;
+    padding: 0;
+    color:#fff;
+}
+.p2{
+    color:#fff;
+    font-size: 16px;
+    line-height: 20px;
+}
+.red-btn{
+    padding: 2px 37px;
+    color: #333;
+    background: #fff;
+    border-color: #fff
+}
+.outline-bbtn{
+    display: inline-block;
+    padding: 3px 23px;
+    margin: 3px;
+    border: 2px solid #FFFFFF;
+    /* border-radius: 10px; */
+    -webkit-transition: 0.2s opacity;
+    transition: 0.2s opacity
+}
+/*------------------*/
+.footer {
+    padding: 10px 25%;
+    color: #666;
+    background-color:black;
+}
+.footer table td{ 
+    width: 200px;
+    height: 35px;
+}
+
+.product-function{
+    margin-left: 170px;
+}
+.function{
+    margin-top: 10px;
+    background-color: #f5f5f5;
+}
+.function div{
+    display: inline-block;
+    /* padding-top: 10px;
+    padding-bottom: 5px; */
+}
+/* .function-img{
+    
+} */
+.product-function-info span{
+    font-size: 20px;
+}
+.product-function-info{
+    margin-left: 15px;
+    margin-top: 0px;
+}

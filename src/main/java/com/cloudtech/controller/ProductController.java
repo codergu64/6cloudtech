@@ -4,21 +4,18 @@ import com.cloudtech.domain.CloudSystem;
 import com.cloudtech.domain.TraitContent;
 import com.cloudtech.service.IProductService;
 import com.cloudtech.service.ITraitService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
 
-@RestController
 @RequestMapping("/product")
+@Controller
 public class ProductController {
     @Resource
     private IProductService iProductService;
-
     @Resource
     private ITraitService iTraitService;
     /**
@@ -50,10 +47,21 @@ public class ProductController {
      * @param productId
      * @return
      */
-    @GetMapping("/selectByProductId")
-    @ResponseBody
-    public List<TraitContent> selectByProducrId(Integer productId){
+    @GetMapping("/selectByProductId/{id}")
+    public String selectByProducrId(Model model, @PathVariable("id") Integer productId){
         List<TraitContent> traitContents = iTraitService.selectByProductId(productId);
+        model.addAttribute("products",traitContents);
+        return "product";
+    }
+    @GetMapping("/p")
+    public String product(){
+        return "product";
+    }
+    @GetMapping("/test/{id}")
+    @ResponseBody
+    public List test(@PathVariable("id") Integer productId){
+        List<TraitContent> traitContents = iTraitService.selectByProductId(productId);
+
         return traitContents;
     }
 

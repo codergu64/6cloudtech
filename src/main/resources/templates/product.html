@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        六方云-神探产品
+    </title>
+    <!--引入重置样式表-->
+    <link rel="stylesheet" href="/6CloudTech/css/reset.css">
+    <!--引入图标字体-->
+    <!--引入当前页面的样式表-->
+    <link rel="stylesheet" href="/6CloudTech/css/product.css">
+    <!--引入公共的样式表-->
+    <link rel="stylesheet" href="/6CloudTech/css/base.css">
+    <link rel="stylesheet" href="/6CloudTech/css/style.css">
+    <!--设置网站图标-->
+    <link rel="icon" href="/6CloudTech/img/web-logo.ico">
+    <link rel="stylesheet" href="/6CloudTech/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/6CloudTech/bootstrap/css/bootstrap-theme.min.css">
+    <script src="/6CloudTech/bootstrap/js/jquery-3.4.1.min.js"></script>
+    <script src="/6CloudTech/bootstrap/js/bootstrap.min.js" type="application/javascript"></script>
+</head>
+<body>
+    <!--顶部导航条-->
+    <!--顶部导航条外部容器-->
+    <div class="topbar-wrapper">
+        <!--内部容器-->
+        <div class="topbar w clearfix">
+            <!--左侧导航条-->
+            <ul class="service">
+                <li><a href="javascript:;">六方云</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">让万物安全互联</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">AiSec</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">Csec</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">CdSec</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">LinSec</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">NSec</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">安全服务</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">超弦人工智能实验室</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">超弦攻防研究实验室</a></li>
+                <li class="line">|</li>
+                <li><a href="javascript:;">超弦工控安全实验室</a></li>
+                <li class="line">|</li>
+            </ul>
+        </div>
+    </div>
+
+    <!--产品详情页的标题-->
+    <div class="product-wrapper">
+        <div class="product-title">
+            <p>&nbsp</p>
+            <p class="info1" th:text>1111</p><br>
+            <p class="info2">集中监控 · 统一管理</p>
+        </div>
+    </div>
+
+    <!--产品特点介绍-->
+     <div class="title">
+        <p class="title-name">神探产品介绍</p>
+        <hr>
+        <!-- <p class="title-intro"><p>起飞页不仅是一个方便快捷的构建网站的自助建站平台，更重要的是，我们为中国用户提供了更多贴心的服务：网站备案、自动备份、快速恢复以及网站代建服务。
+            我们使用了国内和香港最好的网络和云服务器，确保您的网站能够快速完美的呈现在访客面前</p></p> -->
+    </div>
+
+    <div class="container marketing">
+        <!-- Three columns of text below the carousel -->
+        <div class="row" style="margin-left:30px;">
+          <div class="col-lg-4" th:each="product:${products}" th:if="${product.type==0}" >
+
+            <img style="padding-left:150px;" src="/6CloudTech/img/1.png" alt="Generic placeholder image" width="140" height="140">
+            <br>
+            <h4  th:text="${product.title}"></h4>
+            <p th:text="${product.content}"></p>
+            <!-- <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p> -->
+          </div><!-- /.col-lg-4 -->
+        </div>
+    </div>   
+     
+
+    <!--产品功能标题-->
+    <div class="title">
+       <p class="title-name">神探产品功能介绍</p>
+       <hr>
+       <!-- <p class="title-intro"><p>起飞页不仅是一个方便快捷的构建网站的自助建站平台，更重要的是，我们为中国用户提供了更多贴心的服务：网站备案、自动备份、快速恢复以及网站代建服务。
+           我们使用了国内和香港最好的网络和云服务器，确保您的网站能够快速完美的呈现在访客面前</p></p> -->
+    </div>
+    <br>
+    <!--产品功能介绍-->
+   <div class="product-function">
+    <div class="function">
+        <div class ="function-img">
+            <img src="/6CloudTech/img/1.png" alt="">
+        </div>
+        <div class="product-function-info">
+            <span>设备管理</span>
+            <p>对设备集中管理，包括设备状态监控、拓扑管理、系统配置管理、日志管理等。对整个网络状态进行分析，对终端设备进行策略下发。</p>
+        </div>
+    </div>
+    <div class="function" >
+        <div class ="function-img">
+            <img src="/6CloudTech/img/1.png" alt="">
+        </div>
+        <div class="product-function-info">
+            <span>实时监控</span>
+            <p>对工控网络中安全设备、工控设备、网络设备等设备的实时状态、安全事件、系统事件、日志等信息的实时监控。</p>
+        </div>
+    </div>
+    <div class="function">
+        <div  class ="function-img">
+            <img src="/6CloudTech/img/1.png" style="padding-top:10px;" alt="">
+        </div>
+        <div class="product-function-info">
+            <span>规则管理</span>
+            <p>可以按照设备划分不同的安全域，实现安全域的管理，帮助管理人员提高工作效率，降低操作风险。</p>
+        </div>
+    </div>
+    <div class="function">
+        <div  class ="function-img">
+            <img src="/6CloudTech/img/1.png" alt="">
+        </div>
+        <div class="product-function-info">
+            <span>主机安全管理</span>
+            <p>对主机的管理包括模板配置、策略下发、主机状态监测、日志管理等</p>
+        </div>
+    </div>
+    <br><br>
+   </div>
+     <!--条形背景-->
+     <div class="bac-img">
+        <p class="p1">让万物安全互联</p>
+        <p class="p2">实现工业安全互联 · 帮助用户安全上云 · 助力用户全面掌控安全态势</p>
+        <button class="red-btn outline-bbtn">项目咨询</button>
+        <button class="red-btn outline-bbtn">申请白皮书</button>
+    </div>
+    <div></div>
+
+
+    <div><div class="footer">
+        <table style="text-align: center;vertical-align:middle;">
+            <tr>
+                <td>5+1产品线</td>
+                <td>行业方案</td>
+                <td>超弦实验室</td>
+                <td>关于我们</td>
+            </tr>
+            <tr>
+                <td>AI安全</td>
+                <td>工业互联网安全解决方案</td>
+                <td>超弦人工智能实验室</td>
+                <td>公司简介</td>
+            </tr>
+            <tr>
+                <td>工控安全</td>
+                <td>人工智能安全解决方案</td>
+                <td>超弦攻防研究实验室</td>
+                <td>新闻与活动</td>
+            </tr>
+            <tr>
+                <td>网络安全</td>
+                <td>云安全解决方案</td>
+                <td>超弦工控安全实验室</td>
+                <td>行业应用</td>
+            </tr>
+            <tr>
+                <td>云安全</td>
+                <td>态势感知安全解决方案</td>
+                <td>安全周刊</td>
+                <td>人才招聘</td>
+            </tr>
+            <tr>
+                <td>态势感知</td>
+                <td></td>
+                <td>安全研究</td>
+                <td>联系我们</td>
+            </tr>
+            <tr>
+                <td>安全服务</td>
+                <td></td>
+                <td>特征库更新</td>
+                <td></td>
+            </tr>
+        </table>
+        <div>Copyright © 2019  ICP备000000号 · 服务器使用: <a href="https://www.6cloudtech.com/">华为云</a> · All Rights Reserved Powered By <a href="/">六方云-让万物安全互联</a></div>
+        <div>AI安全 | 工控安全  |  网络安全  |   云安全  |   态势感知  |   安全服务  |  超弦人工智能实验室 |  超弦工控安全实验室  |  超弦攻防研究实验室</div>
+    </div></div>
+</body>
+</html>
