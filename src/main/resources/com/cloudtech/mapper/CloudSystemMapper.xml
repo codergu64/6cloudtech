@@ -23,10 +23,10 @@
      select * from cloud_system where type = #{type}
   </select>
   <select id="selectByLabId" resultType="com.cloudtech.domain.CloudSystem">
-     select * from cloud_system where product_id = #{productId,jdbcType=INTEGER}
+     select * from cloud_system where lab_id=#{labId,jdbcType=INTEGER}
   </select>
   <select id="selectByProductId" resultType="com.cloudtech.domain.CloudSystem">
-     select * from cloud_system where lab_id=#{labId,jdbcType=INTEGER}
+     select * from cloud_system where product_id = #{productId,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from cloud_system
