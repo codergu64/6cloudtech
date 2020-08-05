@@ -4,17 +4,22 @@ import com.cloudtech.domain.CloudSystem;
 import com.cloudtech.domain.TraitContent;
 import com.cloudtech.service.IProductService;
 import com.cloudtech.service.ITraitService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 @RestController
 @RequestMapping("/product")
 public class ProductController {
+    @Resource
     private IProductService iProductService;
+
+    @Resource
     private ITraitService iTraitService;
     /**
      * 查询产品体系 实验室类型

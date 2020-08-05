@@ -4,6 +4,7 @@ import com.cloudtech.domain.TraitContent;
 import com.cloudtech.mapper.TraitContentMapper;
 import com.cloudtech.service.ITraitService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -11,6 +12,7 @@ import java.util.List;
  * 湖人总冠军
  * king.wang
  */
+@Service
 public class ITraitServicrImpl implements ITraitService {
     @Autowired
     private TraitContentMapper traitContentMapper;

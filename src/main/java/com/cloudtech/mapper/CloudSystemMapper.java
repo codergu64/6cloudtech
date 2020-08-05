@@ -21,6 +21,6 @@ public interface CloudSystemMapper {
      * 查出产品体系 超弦实验室
      * @return
      */
-    List<CloudSystem> selectProductAll(int type);
+    List<CloudSystem> selectProductAll(Integer type);
 
 }

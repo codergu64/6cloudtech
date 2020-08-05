@@ -19,8 +19,8 @@
     from cloud_system
     where id = #{id,jdbcType=INTEGER}
   </select>
-  <select id="selectProductAll" resultType="com.cloudtech.domain.CloudSystem">
-     select * from cloud_system where type = #{type,jdbcType=INTEGER}
+  <select id="selectProductAll" resultMap="BaseResultMap">
+     select * from cloud_system where type = #{type}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from cloud_system
