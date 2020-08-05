@@ -65,6 +65,28 @@ public class ProductController {
         return traitContents;
     }
 
+    /**
+     * 查询实验室标题
+     * @param labId
+     * @return
+     */
+    @GetMapping("/selectLab")
+    @ResponseBody
+    public List<CloudSystem> selectLabId(Integer labId){
+        List<CloudSystem> cloudSystems = iProductService.selectByLabId(labId);
+        return cloudSystems;
+    }
 
+    /**
+     * 查询产品标题
+     * @param productId
+     * @return
+     */
+    @GetMapping("/selectProduct")
+    @ResponseBody
+    public List<CloudSystem> selectProduct(Integer productId){
+        List<CloudSystem> cloudSystems = iProductService.selectByProductId(productId);
+        return cloudSystems;
+    }
 
 }

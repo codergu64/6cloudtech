@@ -22,5 +22,7 @@ public interface CloudSystemMapper {
      * @return
      */
     List<CloudSystem> selectProductAll(Integer type);
+    List<CloudSystem> selectByLabId(Integer labId);
+    List<CloudSystem> selectByProductId(Integer productId);
 
 }

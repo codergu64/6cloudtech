@@ -1,7 +1,6 @@
 package com.cloudtech.service;
 
 import com.cloudtech.domain.CloudSystem;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -15,4 +14,6 @@ public interface IProductService {
  * 查出产品体系和超弦实验室
  */
     List<CloudSystem> selectAll(Integer type);
+    List<CloudSystem> selectByLabId(Integer labId);
+    List<CloudSystem> selectByProductId(Integer productId);
 }
